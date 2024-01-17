@@ -34,7 +34,7 @@ const subtraction = 10 - 5; // 5
 const multiplication = 10 * 5; // 50
 const division = 10 / 5; // 2
 const exponentiation = 10 ** 5; // 100000 - 10 у 5 степені
-const remainder = 16 % 7; // 2 - остача від ділення 16 на 7
+const remainder = 16 % 7; // 2 - остача від ділення 16 на 7
 
 const x = 357;
 const lastDigit = x % 10; // 7 - остання цифра
