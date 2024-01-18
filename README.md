@@ -109,3 +109,40 @@ let totalArea = 10 * calculateArea(3 * 4); // 10 * 12
 // то для `width` береться значення 1.5 встановлене за замовчуванням
 let area2 = calculateArea(10); // 15 = 10 * 1.5
 ```
+
+
+## Умовні оператори
+```js
+let age = 25;
+
+if (age >= 18) {
+  // виконується якщо умова вірна
+  console.log('Adult');
+}
+
+if (age >= 18) {
+  console.log('Hello!');
+} else {
+  // виконується якщо умова НЕ вірна
+  console.log('Hi!');
+}
+
+// виконується лише перший блок умова якого вірна
+// або блок `else`, якщо жодна з умов НЕ вірна
+if (age >= 18) {
+  console.log('Hello!');
+} else if (age > 7) {
+  console.log('Hi!');
+} else if (age > 3) {
+  console.log('Hi, kid!');
+} else {
+  console.log('Hi, toddler!');
+}
+
+let isPresent = true;
+
+if (age >= 18 && isPresent) {
+  // виконується якщо обидві умови вірні
+  console.log('Hello!');
+}
+```
