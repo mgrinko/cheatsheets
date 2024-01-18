@@ -92,3 +92,20 @@ let hasEnoughCredit = creditCard >= price;
 let canPay = hasEnoughCash || hasEnoughCredit; // хоча б одна з умов
 let canBuy = isAdult && canPay; // обидві умови
 ```
+
+## Функції
+
+```js
+function calculateArea(length, width = 1.5) {
+  // тут можуть бути інші команди
+
+  return length * width;
+}
+
+let area1 = calculateArea(5, 7); // 35
+let totalArea = 10 * calculateArea(3 * 4); // 10 * 12
+
+// Якщо другий аргумент не передано
+// то для `width` береться значення 1.5 встановлене за замовчуванням
+let area2 = calculateArea(10); // 15 = 10 * 1.5
+```
