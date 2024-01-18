@@ -50,16 +50,18 @@ const result2 = (5 + 2) * 10; // 70
 ## Рядки
 
 ```js
+const surname = 'Smith';
 const name = 'John';
-const lastName = 'Smith';
+
+const firstCharacter = name[0]; // 'J' - перший символ
 
 console.log(name.length); // 5 - кількість символів
 
-const firstCharacter = name[0]; // 'J' - перший символ
-const lastCharacter = name[name.length - 1]; // 'n' - останній символ
+const lastIndex = name.length - 1; // 4 - індекс останнього символа
+const lastCharacter = name[lastIndex]; // 'n' - останній символ
 
-const initials = name[0] + lastName[0]; // 'JS'
-const fullName = `Mr. ${name} ${lastName}`; // 'Mr. John Smith'
+const initials = name[0] + surname[0]; // 'JS' - конкатенація
+const fullName = `Mr. ${name} ${surname}`; // 'Mr. John Smith' - інтерполяція
 ```
 
 ## Булев тип. Оператори порівняння.
