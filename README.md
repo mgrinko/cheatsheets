@@ -185,6 +185,7 @@ let lastCity = cities[cities.length - 1]; // Paris
 cities[1] = 'New York';
 console.log(cities); // ['Kyiv', 'New York', 'Paris']
 
+// Додаємо елементи в кінець масиву
 cities.push('Amsterdam');
 console.log(cities); // ['Kyiv', 'New York', 'Paris', 'Amsterdam']
 
