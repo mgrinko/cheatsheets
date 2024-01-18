@@ -48,6 +48,7 @@ const result2 = (5 + 2) * 10; // 70
 ```
 
 ## Рядки
+
 ```js
 const name = 'John';
 const lastName = 'Smith';
@@ -76,7 +77,8 @@ console.log(
 );
 ```
 
-## Логічні оператори !, || та && 
+## Логічні оператори !, || та &&
+
 ```js
 const age = 25;
 let isChild = age < 18; // false
@@ -109,7 +111,6 @@ let totalArea = 10 * calculateArea(3 * 4); // 10 * 12
 // то для `width` береться значення 1.5 встановлене за замовчуванням
 let area2 = calculateArea(10); // 15 = 10 * 1.5
 ```
-
 
 ## Умовні оператори
 ```js
@@ -145,4 +146,48 @@ if (age >= 18 && isPresent) {
   // виконується якщо обидві умови вірні
   console.log('Hello!');
 }
+```
+
+## Функція з умовними операторами
+```js
+function getGreeting(age) {
+  // функція завершується, як тільки спрацює будь-який `return`
+  // і не виконуватиме команди що стоять після
+  if (age >= 18) {
+    return 'Hello!';
+  }
+
+  if (age > 7) {
+    return 'Hi!';
+  }
+
+  if (age > 3) {
+    return 'Hi, kid!';
+  }
+
+  return 'Hi, toddler!';
+}
+
+let greeting = getGreeting(6);
+
+console.log(greeting); // у консолі зʼявиться `Hi, kid!`
+```
+
+## Масиви
+```js
+let cities = ['Kyiv', 'London', 'Paris'];
+
+console.log(cities.length); // 3
+let firstCity = cities[0]; // Kyiv
+let lastCity = cities[cities.length - 1]; // Paris
+
+// заміняємо другий елемент масиву на інший
+cities[1] = 'New York';
+console.log(cities); // ['Kyiv', 'New York', 'Paris']
+
+cities.push('Amsterdam');
+console.log(cities); // ['Kyiv', 'New York', 'Paris', 'Amsterdam']
+
+cities.push('Roma', 'Tokyo');
+console.log(cities); // ['Kyiv', 'New York', 'Paris', 'Amsterdam', 'Roma', 'Tokyo']
 ```
