@@ -176,6 +176,7 @@ console.log(greeting); // у консолі зʼявиться `Hi, kid!`
 ```
 
 ## Масиви
+
 ```js
 let cities = ['Kyiv', 'London', 'Paris'];
 
