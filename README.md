@@ -19,7 +19,7 @@
 - [Резюме](https://www.youtube.com/playlist?list=PL7FuXFaDeEX1iScWQMsfZ9ueUj54iGuQ3)
 
 ## Корисно
+- [Ігри на логіку Scratch](https://blockly.games/)
 - [Перевір швидкість набору](https://mate.academy/type)
 - [Навчись набирати наосліп (EN)](https://www.typingclub.com/)
 - [Прокачуй швидкість набору (EN + UA)](https://www.keybr.com/)
-- 
