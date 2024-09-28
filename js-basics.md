@@ -196,3 +196,270 @@ console.log(cities); // ['Kyiv', 'New York', 'Paris', 'Amsterdam']
 cities.push('Roma', 'Tokyo');
 console.log(cities); // ['Kyiv', 'New York', 'Paris', 'Amsterdam', 'Roma', 'Tokyo']
 ```
+
+## Цикли
+
+```js
+// age - від 1 до 5
+for (let age = 1; age <= 5; age += 1) { // age++
+  console.log(`I am ${age}`);
+}
+
+// у зворотньому напрямку - від 3 до 1
+for (let i = 3; i > 0; i--) {
+  console.log(i);
+}
+```
+
+## Функція з циклом
+
+```js
+function sumFromTo(min, max, step) {
+  let sum = 0;
+
+  // від `min` до `max` з кроком `step`
+  for (let n = min; n <= max; n += step) {
+    sum += n; 
+  }
+
+  return sum;
+}
+
+console.log(
+  sumFromTo(1, 5, 2) // 9
+);
+```
+
+```js
+function factorial(N) {
+  let result = 1; // починаємо з 1
+
+  for (let n = 1; n <= N; n++) {
+    result *= n; // помножуємо добуток попередніх чисел на поточне число n
+  }
+
+  return result; // повертаємо обчислений факторіал
+}
+
+const result = factorial(5);
+
+console.log(result); // виведе 120
+```
+
+## Перебір рядків
+
+```js
+const title = 'String';
+
+// прямий порядок
+for (let i = 0; i < title.length; i++) {
+  console.log(title[i]);
+}
+
+// зворотній
+for (let i = title.length - 1; i >= 0; i--) {
+  console.log(title[i]);
+}
+
+// без індексу
+for (let char of title) {
+  console.log(char);
+}
+```
+
+### Обернення рядка
+
+```js
+let reversed = '';
+
+for (let i = title.length - 1; i >= 0; i--) {
+  reversed += title[i];
+}
+
+// for (let char of title) {
+//   // додаємо символ перед тими, що були додані раніше
+//   reversed = char + reversed;
+// }
+
+console.log(reversed); // 'gnirtS'
+```
+
+### Функція для заміни символів
+
+```js
+function replaceAll(input, char, replacement){
+  let result = '';
+
+  for (let ch of input) {
+    if (ch === char){
+      result += replacement;
+    } else {
+      result += ch;
+    }
+  }
+ 
+  return result;
+}
+
+let title = 'Working with Strings';
+
+console.log(
+  replaceAll(title, ' ', '-')
+); 
+```
+
+## Методи рядків
+
+```js
+let title = 'Working with Strings';
+
+// Зміна регістру
+console.log(
+  title.toLowerCase(), // 'working with strings'
+  title.toUpperCase() // 'WORKING WITH STRINGS'
+  title, // 'Working with Strings'
+);
+
+function isLetter(ch) {
+  return ch.toLowerCase() !== ch.toUpperCase();
+}
+
+// Заміна символів
+console.log(
+  title.replaceAll(' ', '-'), // 'working-with-strings'
+  title.replaceAll('with', '**'), // 'working–**-strings'
+);
+
+// перевірка входження
+console.log(
+  title.includes(' '), // true
+  title.includes('with'), // true
+  title.includes('With'), // false
+);
+
+console.log(
+  title.indexOf(' '), // 7
+  title.indexOf('with'), // 8
+  title.indexOf('Strings'), // 13
+);
+```
+
+## Перебір масивів
+
+```js
+const prices = [10, 20, 30, 40, 50];
+const totalPrice = getSum(prices);
+
+console.log(totalPrice);
+
+function getSum(values) {
+  let sum = 0;
+
+  for (let i = 0; i < values.length; i++) {
+    sum += values[i];
+  }
+
+  // for (const value of values) {
+  //   sum += value;
+  // }
+
+  return sum;
+}
+
+function getAverage(values) {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  let sum = 0;
+
+  for (const value of values) {
+    sum += value;
+  }
+
+  return sum / values.length;
+}
+
+function getMin(values) {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  let min = values[0];
+
+  for (const value of values) {
+    if (value < min) {
+      min = value;
+    } 
+  }
+
+  return min;
+}
+```
+
+### Перетворення рядка у масив
+
+```js
+const text = 'one two three four five';
+
+concole.log(text.split(' ')); // ['one', 'two', 'three', 'four', 'five']
+concole.log(text.split(' а')); // ['one two three', 'our', 'ive']
+
+const fruits = ['apple', 'banana', 'cherry', 'date'];
+const joinedString = fruits.join(', '); // роздільник — кома та пробіл
+
+console.log(joinedString); // у консоль виведеться рядок 'apple, banana, cherry, date'
+```
+
+### Фільтрування
+
+```js
+function getShortWords(words, maxLength) {
+  let results = [];
+  
+  for (const word of words) {
+    if (word.length <= maxLength) {
+      results.push(word);
+    }
+  }
+  
+  return results;
+}
+
+const text = 'one two three four five';
+const words = text.split(' ');
+
+console.log(
+  getShortWords(words, 4)
+);
+```
+
+### Перетворення масива
+
+```js
+function getWordsLengths(words) {
+  const result = [];
+  
+  for (const word of words) {
+    result.push(word.length);
+  }
+  
+  return result;
+}
+
+// отримаємо [3, 3, 5, 4, 4]
+getWordsLengths(['one', 'two', 'three', 'four', 'five']);
+```
+
+### Пошук у масиві
+
+```js
+const words = ['apple', 'banana', 'cherry', 'date'];
+
+console.log(words.includes('apple')); // true
+console.log(words.includes('potato')); // false
+
+console.log(words.indexOf('apple'));// 0
+console.log(words.indexOf('cherry'));// 2
+console.log(words.includes('potato')); // -1
+```
